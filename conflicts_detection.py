@@ -141,7 +141,7 @@ def choose_file():
 
 root = tk.Tk(className="冲突检测")
 sheet_name = 1
-center_window(root, 600, 100)
+center_window(root, 750, 100)
 file_select_label = ttk.Label(root, text="待检测文档：")
 file_select_label.grid(column=1, row=0)
 path = StringVar()

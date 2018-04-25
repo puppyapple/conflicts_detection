@@ -34,7 +34,9 @@ def conflict_check(new_word, word_dicts):
 def read_one(file):
     data_raw = pd.read_excel(file, sheetname=1) \
         .iloc[:,[0, 1, 2, 3, 4, 5, 6, 7]].fillna("empty")
+    data_raw.columns = ["标识", "概念", "或子", "同义", "近义", "泛识别", "体系标记" , "描述"]
     data_raw["分析师"] = file.split("#")[1]
+    print(file)
     return data_raw
 
 def combine(directory):
